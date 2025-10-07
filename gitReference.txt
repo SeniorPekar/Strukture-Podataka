@@ -1,0 +1,372 @@
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka
+$ git init
+Initialized empty Git repository in C:/Users/Nikola/Desktop/Strukture Podataka/.
+git/
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (master)
+$ git branch -M main
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git remote add origin https://github.com/SeniorPekar/Strukture-Podataka.git
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git fetch https://github.com/SeniorPekar/Strukture-Podataka.git
+remote: Enumerating objects: 33, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 33 (delta 3), reused 33 (delta 3), pack-reused 0 (from 0)
+Unpacking objects: 100% (33/33), 776.27 KiB | 5.32 MiB/s, done.
+From https://github.com/SeniorPekar/Strukture-Podataka
+ * branch            HEAD       -> FETCH_HEAD
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git remote add https://github.com/SeniorPekar/Strukture-Podataka.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git fetch --[no-]all https://github.com/SeniorPekar/Strukture-Podataka.git
+error: unknown option `[no-]all'
+usage: git fetch [<options>] [<repository> [<refspec>...]]
+   or: git fetch [<options>] <group>
+   or: git fetch --multiple [<options>] [(<repository> | <group>)...]
+   or: git fetch --all [<options>]
+
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]all            fetch from all remotes
+    --[no-]set-upstream   set upstream for git pull/fetch
+    -a, --[no-]append     append to .git/FETCH_HEAD instead of overwriting
+    --[no-]atomic         use atomic transaction to update references
+    --[no-]upload-pack <path>
+                          path to upload pack on remote end
+    -f, --[no-]force      force overwrite of local reference
+    -m, --[no-]multiple   fetch from multiple remotes
+    -t, --[no-]tags       fetch all tags and associated objects
+    -n                    do not fetch all tags (--no-tags)
+    -j, --[no-]jobs <n>   number of submodules fetched in parallel
+    --[no-]prefetch       modify the refspec to place all refs within refs/prefe
+tch/
+    -p, --[no-]prune      prune remote-tracking branches no longer on remote
+    -P, --[no-]prune-tags prune local tags no longer on remote and clobber chang
+ed tags
+    --[no-]recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    --[no-]dry-run        dry run
+    --[no-]porcelain      machine-readable output
+    --[no-]write-fetch-head
+                          write fetched references to the FETCH_HEAD file
+    -k, --[no-]keep       keep downloaded pack
+    -u, --[no-]update-head-ok
+                          allow updating of HEAD ref
+    --[no-]progress       force progress reporting
+    --[no-]depth <depth>  deepen history of shallow clone
+    --[no-]shallow-since <time>
+                          deepen history of shallow repository based on time
+    --[no-]shallow-exclude <ref>
+                          deepen history of shallow clone, excluding ref
+    --[no-]deepen <n>     deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --refetch             re-fetch without negotiating common commits
+    --[no-]update-shallow accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+    -o, --[no-]server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --[no-]negotiation-tip <revision>
+                          report that we have only objects reachable from this o
+bject
+    --[no-]negotiate-only do not fetch a packfile; instead, print ancestors of n
+egotiation tips
+    --[no-]filter <args>  object filtering
+    --[no-]auto-maintenance
+                          run 'maintenance --auto' after fetching
+    --[no-]auto-gc        run 'maintenance --auto' after fetching
+    --[no-]show-forced-updates
+                          check for forced-updates on all updated branches
+    --[no-]write-commit-graph
+                          write the commit-graph after fetching
+    --[no-]stdin          accept refspecs from stdin
+
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git pull https://github.com/SeniorPekar/Strukture-Podataka.git
+From https://github.com/SeniorPekar/Strukture-Podataka
+ * branch            HEAD       -> FETCH_HEAD
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    New Text Document.txt
+        deleted:    lab1/.vs/ProjectSettings.json
+        deleted:    lab1/.vs/VSWorkspaceState.json
+        deleted:    lab1/.vs/lab1/v15/.suo
+        deleted:    lab1/.vs/lab1/v15/Browse.VC.db
+        deleted:    lab1/.vs/lab1/v15/ipch/AutoPCH/5258bbbace52d40/ZAD1.ipch
+        deleted:    lab1/.vs/slnx.sqlite
+        deleted:    lab1/lab1.sln
+        deleted:    lab1/lab1/lab1.vcxproj
+        deleted:    lab1/lab1/lab1.vcxproj.filters
+        deleted:    lab1/lab1/lab1.vcxproj.user
+        deleted:    lab1/lab1/studenti.txt.txt
+        deleted:    lab1/lab1/x64/Debug/lab1.log
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/CL.command.1.tlog
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/lab1.lastbuildstate
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/unsuccessfulbuild
+        deleted:    lab1/lab1/x64/Debug/vc141.idb
+        deleted:    lab1/lab1/x64/Debug/vc141.pdb
+        deleted:    lab1/lab1/zad1.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ $git status
+bash: status: command not found
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    New Text Document.txt
+        deleted:    lab1/.vs/ProjectSettings.json
+        deleted:    lab1/.vs/VSWorkspaceState.json
+        deleted:    lab1/.vs/lab1/v15/.suo
+        deleted:    lab1/.vs/lab1/v15/Browse.VC.db
+        deleted:    lab1/.vs/lab1/v15/ipch/AutoPCH/5258bbbace52d40/ZAD1.ipch
+        deleted:    lab1/.vs/slnx.sqlite
+        deleted:    lab1/lab1.sln
+        deleted:    lab1/lab1/lab1.vcxproj
+        deleted:    lab1/lab1/lab1.vcxproj.filters
+        deleted:    lab1/lab1/lab1.vcxproj.user
+        deleted:    lab1/lab1/studenti.txt.txt
+        deleted:    lab1/lab1/x64/Debug/lab1.log
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/CL.command.1.tlog
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/lab1.lastbuildstate
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/unsuccessfulbuild
+        deleted:    lab1/lab1/x64/Debug/vc141.idb
+        deleted:    lab1/lab1/x64/Debug/vc141.pdb
+        deleted:    lab1/lab1/zad1.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git commit -m "deleting corrupted files"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    New Text Document.txt
+        deleted:    lab1/.vs/ProjectSettings.json
+        deleted:    lab1/.vs/VSWorkspaceState.json
+        deleted:    lab1/.vs/lab1/v15/.suo
+        deleted:    lab1/.vs/lab1/v15/Browse.VC.db
+        deleted:    lab1/.vs/lab1/v15/ipch/AutoPCH/5258bbbace52d40/ZAD1.ipch
+        deleted:    lab1/.vs/slnx.sqlite
+        deleted:    lab1/lab1.sln
+        deleted:    lab1/lab1/lab1.vcxproj
+        deleted:    lab1/lab1/lab1.vcxproj.filters
+        deleted:    lab1/lab1/lab1.vcxproj.user
+        deleted:    lab1/lab1/studenti.txt.txt
+        deleted:    lab1/lab1/x64/Debug/lab1.log
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/CL.command.1.tlog
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/lab1.lastbuildstate
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/unsuccessfulbuild
+        deleted:    lab1/lab1/x64/Debug/vc141.idb
+        deleted:    lab1/lab1/x64/Debug/vc141.pdb
+        deleted:    lab1/lab1/zad1.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git rm^C
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git rm lab1
+fatal: not removing 'lab1' recursively without -r
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git rm lab1 -r
+rm 'lab1/.vs/ProjectSettings.json'
+rm 'lab1/.vs/VSWorkspaceState.json'
+rm 'lab1/.vs/lab1/v15/.suo'
+rm 'lab1/.vs/lab1/v15/Browse.VC.db'
+rm 'lab1/.vs/lab1/v15/ipch/AutoPCH/5258bbbace52d40/ZAD1.ipch'
+rm 'lab1/.vs/slnx.sqlite'
+rm 'lab1/lab1.sln'
+rm 'lab1/lab1/lab1.vcxproj'
+rm 'lab1/lab1/lab1.vcxproj.filters'
+rm 'lab1/lab1/lab1.vcxproj.user'
+rm 'lab1/lab1/studenti.txt.txt'
+rm 'lab1/lab1/x64/Debug/lab1.log'
+rm 'lab1/lab1/x64/Debug/lab1.tlog/CL.command.1.tlog'
+rm 'lab1/lab1/x64/Debug/lab1.tlog/lab1.lastbuildstate'
+rm 'lab1/lab1/x64/Debug/lab1.tlog/unsuccessfulbuild'
+rm 'lab1/lab1/x64/Debug/vc141.idb'
+rm 'lab1/lab1/x64/Debug/vc141.pdb'
+rm 'lab1/lab1/zad1.c'
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    lab1/.vs/ProjectSettings.json
+        deleted:    lab1/.vs/VSWorkspaceState.json
+        deleted:    lab1/.vs/lab1/v15/.suo
+        deleted:    lab1/.vs/lab1/v15/Browse.VC.db
+        deleted:    lab1/.vs/lab1/v15/ipch/AutoPCH/5258bbbace52d40/ZAD1.ipch
+        deleted:    lab1/.vs/slnx.sqlite
+        deleted:    lab1/lab1.sln
+        deleted:    lab1/lab1/lab1.vcxproj
+        deleted:    lab1/lab1/lab1.vcxproj.filters
+        deleted:    lab1/lab1/lab1.vcxproj.user
+        deleted:    lab1/lab1/studenti.txt.txt
+        deleted:    lab1/lab1/x64/Debug/lab1.log
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/CL.command.1.tlog
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/lab1.lastbuildstate
+        deleted:    lab1/lab1/x64/Debug/lab1.tlog/unsuccessfulbuild
+        deleted:    lab1/lab1/x64/Debug/vc141.idb
+        deleted:    lab1/lab1/x64/Debug/vc141.pdb
+        deleted:    lab1/lab1/zad1.c
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    New Text Document.txt
+
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git commit -m "deleting corrupted files
+> "
+[main 1146c1e] deleting corrupted files
+ 18 files changed, 317 deletions(-)
+ delete mode 100644 lab1/.vs/ProjectSettings.json
+ delete mode 100644 lab1/.vs/VSWorkspaceState.json
+ delete mode 100644 lab1/.vs/lab1/v15/.suo
+ delete mode 100644 lab1/.vs/lab1/v15/Browse.VC.db
+ delete mode 100644 lab1/.vs/lab1/v15/ipch/AutoPCH/5258bbbace52d40/ZAD1.ipch
+ delete mode 100644 lab1/.vs/slnx.sqlite
+ delete mode 100644 lab1/lab1.sln
+ delete mode 100644 lab1/lab1/lab1.vcxproj
+ delete mode 100644 lab1/lab1/lab1.vcxproj.filters
+ delete mode 100644 lab1/lab1/lab1.vcxproj.user
+ delete mode 100644 lab1/lab1/studenti.txt.txt
+ delete mode 100644 lab1/lab1/x64/Debug/lab1.log
+ delete mode 100644 lab1/lab1/x64/Debug/lab1.tlog/CL.command.1.tlog
+ delete mode 100644 lab1/lab1/x64/Debug/lab1.tlog/lab1.lastbuildstate
+ delete mode 100644 lab1/lab1/x64/Debug/lab1.tlog/unsuccessfulbuild
+ delete mode 100644 lab1/lab1/x64/Debug/vc141.idb
+ delete mode 100644 lab1/lab1/x64/Debug/vc141.pdb
+ delete mode 100644 lab1/lab1/zad1.c
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    New Text Document.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git push -a
+error: unknown switch `a'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]repo <repository>
+                          repository
+    --[no-]all            push all branches
+    --[no-]branches       alias of --all
+    --[no-]mirror         mirror all refs
+    -d, --[no-]delete     delete refs
+    --[no-]tags           push tags (can't be used with --all or --branches or -
+-mirror)
+    -n, --[no-]dry-run    dry run
+    --[no-]porcelain      machine-readable output
+    -f, --[no-]force      force updates
+    --[no-]force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --[no-]force-if-includes
+                          require remote updates to be integrated locally
+    --[no-]recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --[no-]thin           use thin pack
+    --[no-]receive-pack <receive-pack>
+                          receive pack program
+    --[no-]exec <receive-pack>
+                          receive pack program
+    -u, --[no-]set-upstream
+                          set upstream for git pull/status
+    --[no-]progress       force progress reporting
+    --[no-]prune          prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --verify              opposite of --no-verify
+    --[no-]follow-tags    push missing but relevant tags
+    --[no-]signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --[no-]atomic         request atomic transaction on remote side
+    -o, --[no-]push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+Nikola@DESKTOP-HR5GUH3 MINGW64 ~/Desktop/Strukture Podataka (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 234 bytes | 234.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/SeniorPekar/Strukture-Podataka.git
+   0a7a663..1146c1e  main -> main
+
