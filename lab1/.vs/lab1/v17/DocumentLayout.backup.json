@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nikola\\Desktop\\Strukture Podataka\\lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBBC821-CA45-4557-A40B-4DD500248ADA}|lab1.vcxproj|C:\\Users\\Nikola\\Desktop\\Strukture Podataka\\lab1\\zad1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FCBBC821-CA45-4557-A40B-4DD500248ADA}|lab1.vcxproj|solutionrelative:zad1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBBC821-CA45-4557-A40B-4DD500248ADA}|lab1.vcxproj|C:\\Users\\Nikola\\Desktop\\Strukture Podataka\\lab1\\studenti.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FCBBC821-CA45-4557-A40B-4DD500248ADA}|lab1.vcxproj|solutionrelative:studenti.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "studenti.txt",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Desktop\\Strukture Podataka\\lab1\\studenti.txt",
+              "RelativeDocumentMoniker": "studenti.txt",
+              "ToolTip": "C:\\Users\\Nikola\\Desktop\\Strukture Podataka\\lab1\\studenti.txt",
+              "RelativeToolTip": "studenti.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-07T21:31:50.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "zad1.c",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Desktop\\Strukture Podataka\\lab1\\zad1.c",
+              "RelativeDocumentMoniker": "zad1.c",
+              "ToolTip": "C:\\Users\\Nikola\\Desktop\\Strukture Podataka\\lab1\\zad1.c",
+              "RelativeToolTip": "zad1.c",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvz4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-07T21:09:51.408Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
