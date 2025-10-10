@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-const int MAX_CHAR = 15;
+#define MAX_CHAR 15
+#define MAX_POINTS 115.0
+#define LOAD_ISSUE -1
 /* Zadatak 1:
 Napisati program koji prvo proèita koliko redaka ima datoteka, tj. koliko ima studenata
 zapisanih u datoteci. Nakon toga potrebno je dinamièki alocirati prostor za niz struktura
@@ -12,27 +14,35 @@ Napomena: Svaki redak datoteke sadrži ime i prezime studenta, te broj bodova na 
 relatvan_br_bodova = br_bodova/max_br_bodova*100      
 */
 
-int countLines();
-
-struct Student {
-	char name[15];
-	char surname[15];
+typedef struct Student {
+	char name[MAX_CHAR]; //privaèa imena i prezimena do 15 znakova
+	char surname[MAX_CHAR];
 	int absPoints;
 	double percentage;
-}; //typedef potreban?
-
-int loadInfo(struct Student*, int);
+}Student;
+// prototypes
+int countLines();
+int loadInfo(Student*, int);
 
 int main() {
-	int numOfLines = countLines();
-	struct Student* students = malloc(numOfLines * sizeof(*students));
+	int numOfLines = countLines(); // dobavljanje broja studenata iz datoteke funkcijom
+	Student* students = malloc(numOfLines * sizeof(*students)); //dinamièka alokacija niza struktura
 
-	printf("Zapisano je %d studenata", numOfLines);
-
-	int loadCheck = loadInfo(students, numOfLines);
+	if(numOfLines <= 0) {
+		printf("Doslo je do pogreške pri ucitavanju podataka(broj linija)"); return -1; //vraèanje -1 za krivo uèitavanje u 1. funkciji
+	}else
+		printf("Zapisano je %d studenata\n", numOfLines);
+	int loadCheck = loadInfo(students, numOfLines);// uèitavanje podataka o studentima funkcijom
 	if (loadCheck == 0)
-		printf("Uèitavanje podataka uspješno");
+		printf("Ucitavanje podataka uspjesno");
+	else{
+		printf("Doslo je do pogreske pri ucitavanju podataka (podaci o studentu"); return -2;
+	}// vraæanje -2 za krivo uèitavanje u 2. funkciji
+	
+	for (int i = 0; i < numOfLines; i++) //ispis podataka o studentima
+		printf("\n%s %s %d od %0.0lf (%0.2lf) ", students[i].name, students[i].surname, students[i].absPoints, MAX_POINTS, students[i].percentage);
 
+	free(students); //oslobadjanje memorije
 	return 0;
 }
 
@@ -40,28 +50,26 @@ int countLines() {
 	int counter = 0;
 	FILE* file = fopen("studenti.txt", "r");
 
-	if (file == NULL) 
-		return -1;
+	if (!file) 
+		return LOAD_ISSUE; //provjera otvaranja datoteke
 
-	while (!feof(file))
+	while (!feof(file)) //prebaci u buffer
 		if (fgetc(file) == '\n')
-			 counter++;
+			counter++;		//brojanje redaka
 		
-	fclose(file);
-	if (file == NULL)
+	fclose(file); //provjera potrebna?
 		return counter;
-	else
-		return -2;
 }
 
-int loadInfo(struct Student* students, int numOfLines) {
+int loadInfo( Student* students, int numOfLines) {
 	FILE* file = fopen("studenti.txt", "r");
-	if (file == NULL)
-		return -1;
+	if (!file)
+		return LOAD_ISSUE; //provjera otvaranja datoteke
 
 	for (int i = 0; i < numOfLines; i++) {
-
+		fscanf(file, "%s %s %d", students[i].name, students[i].surname, &students[i].absPoints); //spremanje podataka u strukturu
+		students[i].percentage = ((double)students[i].absPoints / MAX_POINTS) * 100.0; //ako je ispit od 115 bodova
 	}
 	fclose(file);
-	return 0;
+		return 0;
 }
