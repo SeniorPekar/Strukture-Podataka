@@ -1,0 +1,3 @@
+﻿  zad2.c
+C:\Users\Mihael\OneDrive\Radna površina\Strukture podataka\lab2\lab2\zad2.c(114,1): warning C4715: 'deleteBySurname': not all control paths return a value
+  lab2.vcxproj -> C:\Users\Mihael\OneDrive\Radna površina\Strukture podataka\lab2\x64\Debug\lab2.exe

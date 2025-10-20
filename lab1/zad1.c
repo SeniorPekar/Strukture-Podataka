@@ -27,12 +27,16 @@ int loadInfo(Student*, int);
 int main() {
 	int numOfLines = countLines(); // dobavljanje broja studenata iz datoteke funkcijom
 	Student* students = malloc(numOfLines * sizeof(*students)); //dinamièka alokacija niza struktura
+	if (students == NULL)
+		return -3; // vraèanje -3 za krivo alocirnaje memorije
 
 	if(numOfLines <= 0) {
 		printf("Doslo je do pogreške pri ucitavanju podataka(broj linija)"); return -1; //vraèanje -1 za krivo uèitavanje u 1. funkciji
 	}else
 		printf("Zapisano je %d studenata\n", numOfLines);
+
 	int loadCheck = loadInfo(students, numOfLines);// uèitavanje podataka o studentima funkcijom
+
 	if (loadCheck == 0)
 		printf("Ucitavanje podataka uspjesno");
 	else{
@@ -53,7 +57,7 @@ int countLines() {
 	if (!file) 
 		return LOAD_ISSUE; //provjera otvaranja datoteke
 
-	while (!feof(file)) //prebaci u buffer
+	while (!feof(file)) //vrti do kraja datoteke
 		if (fgetc(file) == '\n')
 			counter++;		//brojanje redaka
 		
@@ -69,7 +73,7 @@ int loadInfo( Student* students, int numOfLines) {
 	for (int i = 0; i < numOfLines; i++) {
 		fscanf(file, "%s %s %d", students[i].name, students[i].surname, &students[i].absPoints); //spremanje podataka u strukturu
 		students[i].percentage = ((double)students[i].absPoints / MAX_POINTS) * 100.0; //ako je ispit od 115 bodova
-	}
+	} //buffer?
 	fclose(file);
 		return 0;
 }

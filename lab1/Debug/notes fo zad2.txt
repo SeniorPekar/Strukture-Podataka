@@ -1,0 +1,35 @@
+1)
+typedef struct Person* position
+typedef struct Person{
+	podaci;
+	Position next;
+}per;
+int main(){
+	Person Head = {.name="", .lName="", .next=NULL};
+	return 0;
+}
+A) din. dodaj el na poèetak liste
+1. alokacija na tip position(newPerson[adresa])->malloc svoja fun
+2. strcpy(?): .name="", .lname="", .next=NULL; svoja fun
+3. dohvati head.next(u pointeru) 
+newPerson->next = head.next (da novi na poèetku pokazuje nabivši prvi)
+head.next = newPerson (da head pokazuje na novu prvu)
+B) ispiši
+for(q= head->next; q!=NULL; q= q->next)
+C)din. odaj novi el na kraj liste
+1. alokacija -||-
+2. strcpy
+3.pronaði zadnji u for/while(u provjeri q->next!=NULL)
+4.q->next=newPerson
+D)naði el u nizu
+q=head
+temp= q->next
+provjera prezimena
+return temp
+E)izbriši el
+q=head
+temp=q->next
+q->next = temp->next
+free(temp)
+izgubia se brat na kraju D i E su izmixani(snaces se)
+sve u funkc radi
