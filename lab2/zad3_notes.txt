@@ -1,0 +1,37 @@
+Nadogradi prijašnji zadatak
+
+A) donamièki dodaj el. nakon odabranog
+-inicijalizirat i alociratu
+-petlja(strcmp(q->lastN, lastName)=0)
+-kad naðemo newPerson->next = q->next;  q->next = newPerson;
+
+B) dinamièki dodaj el. odabranog
+inicijalizirat i alocirat
+petlja(strcmp(q->next->lastN, lastN)=0)
+kad naðemo newPerson->next = q->next; q->next = newPerson; //upito, ovo sam ja kemija on je koristia temp varijablu previous
+
+C)Sortiraj listu po prezimenima
+samo bubble sort radi za liste
+tldr napravi bubble sort
+usporedi(q i q->next) pa pribaci q = q->next itd// moje
+
+njegovo:
+q=head
+Position p = q-> next
+-||- temp
+-||- sorted
+strcmp(p->lastN, p->next->lastN)>0
+temp = p->next
+q->next = temp
+p->next = temp->next
+temp->next = p
+
+D)Upiši listu u datoteku
+fopen("blabla.txt")
+fprintf
+fclose() //provjeri otvaranje
+
+E)Izèitaj listu iz datoteke
+fopen("blabla.txt");// pazi kako si dodava da nebi izèitavalo unazad
+fscanf ili nešto
+fclose();
