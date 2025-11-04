@@ -1,0 +1,25 @@
+polinom + polinom = koeficijenti istih eksponenti se zbrajaju eksponenti se prepisuju
+
+6x^3 + 2x^2 -1
+3x^2 + 6x -4
+6x^3 + 5x^2 + 6x - 5
+
+u file-u: 17 1 5 7 -10 3
+math: 17*x^1 + 5x^7 - 10x^3
+3 liste, 1 polinom, 2 polinom, rezultatni polinom
+
+fgets za dobavit listu ? mozeli fscanf
+buffer ->fgets
+sscanf(buffer podaci, "%d $d %n", &koef, &pow, &n ) n = 2 (br. procitanih clanova)
+izgubia se %n u sscanf je povratna vrijednost, ne ide %n u syntaxu
+navodno sigurniji od fscanf, ne zna ni on zasto
+kofol ce skratit (90% nece)
+koristi sortirani unos, treba provjeriti postoji li veæ unesena potencija u listi te ih zbrojiti ako postoji
+
+p= &firstPoly
+Position newEl = NULL
+1,provjera je li prvi poly prazana if firstpoly == NULL i za drugi
+2. napravi sortirani unos (tribat ce prev pokazivac)
+-alociraj prostor, dodaj novog clana
+
+izmislja neki sortirani unos, surely se moze jednostavnie, snaces se
