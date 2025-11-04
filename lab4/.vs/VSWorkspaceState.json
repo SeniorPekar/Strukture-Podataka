@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Debug",
-    "\\lab4"
+    "\\lab4",
+    "\\lab4\\x64\\Debug",
+    "\\x64",
+    "\\x64\\Debug"
   ],
-  "SelectedNode": "\\lab4\\zad4.c",
+  "SelectedNode": "\\lab4",
   "PreviewInSolutionExplorer": false
 }

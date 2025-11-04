@@ -21,6 +21,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="zad4_notes.txt" />
-    <Text Include="polinomi.txt" />
+    <Text Include="..\Debug\polinomi.txt" />
   </ItemGroup>
 </Project>

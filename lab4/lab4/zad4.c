@@ -214,6 +214,7 @@ int getListFromFile(Position head, int lineNumber) {
 		while (current != NULL) {
 			Position temp = current;
 			current = current->next;
+			temp->next = NULL;
 			free(temp); //oslobodi prijašnjeg
 		}
 		head->next = NULL;

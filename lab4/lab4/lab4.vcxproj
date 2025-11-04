@@ -126,7 +126,7 @@
     <ClCompile Include="zad4.c" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="polinomi.txt" />
+    <Text Include="..\Debug\polinomi.txt" />
     <Text Include="zad4_notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
