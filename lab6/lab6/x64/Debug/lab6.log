@@ -1,0 +1,7 @@
+﻿  helpFun.c
+C:\Users\Mihael\OneDrive\Radna površina\Strukture podataka\lab6\lab6\helpFun.c(13,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  lab6..c
+  loadList.c
+  options.c
+  Generating Code...
+  lab6.vcxproj -> C:\Users\Mihael\OneDrive\Radna površina\Strukture podataka\lab6\x64\Debug\lab6.exe

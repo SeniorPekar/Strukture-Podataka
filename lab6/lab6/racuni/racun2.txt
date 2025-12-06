@@ -1,0 +1,9 @@
+2022-09-03
+Maslinovo_ulje 1 3.99
+Jaja_pakiranje(8) 1 2.49
+Sirko 2 1.69
+Cips_paprika 3 2.09
+Kava 1 4.99
+Cevapi_400g 2 5.49
+Caj_sipak 1 3.29
+Burek 1 2.49
