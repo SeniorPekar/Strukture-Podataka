@@ -1,0 +1,33 @@
+ubacuj u stog dok ne dodje do operacije
+provjeri unos, oslobodi listu ako dodje do greske
+
+1)td struct _postfix* Position
+td struct postfix{
+	double num
+	Position next} postfix;
+
+head = {.next = NULL, .num = 0.0}
+
+2)učitaj dat, pohrani pod u buffer(oslobodi buffer kad si gotov s njin)
+zatvori dat
+
+3) push i pop za rad sa stogom
+-provjeri jel procitan broj ili operator ili thrash
+Push(Position head, double noviNum):
+ -alociraj newEL
+ - newEl ->num  = num
+ - newEl->next = NULL
+ - q = head
+ - newEl-> next = q->next
+ - q->next = newEl
+
+Obavimo operaciju ->pop prva dva el i push rezultat
+Pop(Position first, Position second)
+first = q->next; second = first -> next
+head->next = second->next
+first->next = NULL; second->next = NULL
+free(first), free(second)
+
+Push(q, rezultat)
+
+format dat ( 4 5 * 3 + 11 / 2 ...), ne treba uračunat zagrade

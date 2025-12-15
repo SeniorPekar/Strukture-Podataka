@@ -1,0 +1,38 @@
+struct stack{ (push/pop)
+	stackPosition next;
+	dirPosition dirLevel;
+
+};
+struct directory{
+	char name[MAX];
+	dirPosition next;
+	dirPosition subDirPos;
+};
+1) unos novih dir
+alociraj prostor za novi dir
+parentDir = headStack->next->dirLevel(C: stavljen kao prvi na stogu u startu
+newDir->next = parentDir->subDirPos
+parentDir->subDirPos = newDir
+
+2)cd dir
+provjeri postoji li dir sa unesenim imenom u trenutnom dir
+temp = headStack->next->dirLvl->subDirPos(pokazivać na prvi child dir u trenutnom dir)
+strcmp(temp->name, userUnos), temp = temp->next
+kad se podudara radimo push(&headStack, temp);
+else nema
+3) cd ..
+aj nazad 
+4) dir(ispisi sve dir u trenutnom)
+rekurzivna fun?
+printDir(dirPosition current){
+	dirPosition currentSubDir = NULL;
+	if(current->subDirPos != NULL){
+		currentSubDir = current -> subDirPosition;
+		while(currentSubDir != NULL){
+			print currentSubdir->name;
+			printDir(currentSubDir);
+			currentSubDir = currentSubDir->next;
+		}
+	} else{prazan dir}
+}
+5)oslobodi sve type shii

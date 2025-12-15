@@ -119,6 +119,7 @@ int freeLists(billPosition headBill) {
 		free(tempBill);
 	}
 	headBill->nextBill = NULL;
+	free(headBill);
 	printf("Svi racuni su uspješno obrisani iz memorije.\n");
 
 	return 0;

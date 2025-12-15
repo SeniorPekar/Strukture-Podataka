@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lab7",
+    "\\lab7\\lab7",
+    "\\lab7\\x64\\Debug"
   ],
-  "SelectedNode": "\\lab5.sln",
+  "SelectedNode": "\\lab7\\lab7\\lab7.c",
   "PreviewInSolutionExplorer": false
 }
