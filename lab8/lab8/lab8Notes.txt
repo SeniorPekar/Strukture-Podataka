@@ -1,0 +1,16 @@
+root = insert(root, value);
+
+Za unos novog:
+a)
+root ==NULL;
+-alokacija
+root->value = value
+root->left i right = NULL
+b)
+value<root->value
+root->left = insert(root->left, value);
+c) value>root->value
+root->right = unsert(r->right, value);
+
+return root;(za sve bejsikli)
+
