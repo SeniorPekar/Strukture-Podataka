@@ -351,13 +351,15 @@ static int printMaze(position** grid, int width, int height, position player, po
             }
 
             /* sadržaj æelije */
-            if (pathmap && pathmap[r][c]) {
-                printf(" * ");
-            } else if (player && cell == player) {
+            if (player && cell == player) {
                 printf(" P ");
-            } else if (goal && cell == goal) {
+            }
+            else if (goal && cell == goal) {
                 printf(" G ");
-            } else {
+            }
+            else if (pathmap && pathmap[r][c]) {
+                printf(" * ");
+            }  else {
                 printf("   ");
             }
         }
