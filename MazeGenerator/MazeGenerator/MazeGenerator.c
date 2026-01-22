@@ -47,7 +47,7 @@ int main() {
     int height = 10;
     int mode = 0;
 
-    printf("Pocetna velicina labirinta: %dx%d \n", width, height);
+    printf("Pocetna velicina labirinta: %dx%d \n", width, height);//max width 38 razbija se nakon - max height 19 za visinu ekrana
     printf("Unesite sirinu i visinu (ili unesite bilo sta drugo za korištenje pocetnih vrijednosti): ");
     //fflush(stdout);
 
@@ -61,7 +61,9 @@ int main() {
     }
 
     if (width < 2) width = 2; /* minimalna širina */
+    if (width > 38) width = 38;
     if (height < 2) height = 2; /* minimalna visina */
+    if (height > 19) height = 19;
 
     printf("Odaberi mod:\n");
     printf("  1 - Igraj (WASD) s maglom (samo trenutni zidovi i otkrivene celije su vidljive)\n");
